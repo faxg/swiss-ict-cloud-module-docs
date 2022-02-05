@@ -1,33 +1,29 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://hasura.io',
+    siteUrl: 'https://kind-tree-03a002a03.1.azurestaticapps.net',
     gaTrackingId: null,
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
-    title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
+    logo: 'https://www.gravatar.com/avatar/0100?d=identicon&size=32',
+    logoLink: '/',
+    title: 'Schweizer ICT Berufsbildung',
+    githubUrl: 'https://github.com/faxg/swiss-ict-cloud-module-docs',
+
     helpUrl: '',
     tweetText: '',
     social: `<li>
-		    <a href="https://twitter.com/hasurahq" target="_blank" rel="noopener">
+		    <a href="https://twitter.com/msdev_ch" target="_blank" rel="noopener">
 		      <div class="twitterBtn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Twitter'}/>
 		      </div>
 		    </a>
-		  </li>
-			<li>
-		    <a href="https://discordapp.com/invite/hasura" target="_blank" rel="noopener">
-		      <div class="discordBtn">
-		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
-		      </div>
-		    </a>
-		  </li>`,
-    links: [{ text: '', link: '' }],
+		  </li>,`,
+    links: [
+      { text: 'ICT Berufsbildung', link: 'https://www.ict-berufsbildung.ch/' },
+      { text: 'Microsoft Learn', link: 'https://learn.microsoft.com/' },
+    ],
     search: {
       enabled: false,
       indexName: '',
@@ -39,29 +35,33 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/module_210',
+      '/module_109',
     ],
-    collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+    collapsedNav: ['/introduction'],
+    links: [
+      { text: 'ICT Berufsbildung', link: 'https://www.ict-berufsbildung.ch/' },
+      { text: 'swissICT - Berufe in der ICT', link: 'https://www.berufe-der-ict.ch/' },
+      { text: 'Microsoft Learn', link: 'https://learn.microsoft.com/' },
+      { text: 'Skills for Switzerland', link: 'https://sfors.ch/' },
     ],
-    links: [{ text: 'Hasura', link: 'https://hasura.io' }],
-    frontline: false,
+    frontline: true,
     ignoreIndex: true,
-    title:
-      "<a href='https://hasura.io/learn/'>graphql </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react</a>",
+    title: 'Cloud Module | Microsoft',
   },
   siteMetadata: {
-    title: 'Gatsby Gitbook Boilerplate | Hasura',
-    description: 'Documentation built with mdx. Powering hasura.io/learn ',
+    title: 'Swiss ICT Berufsbildung - Microsoft Cloud Modules',
+    description: 'Learning material for ICT Berufsbildung . Powered by learn.microsoft.com ',
     ogImage: null,
-    docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
+    docsLocation:
+      'https://github.com/faxg/swiss-ict-cloud-module-docs/tree/main/gatsby-swiss-ict-cloud-module/content',
     favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Gitbook Starter',
-      short_name: 'GitbookStarter',
+      name: 'Swiss ICT Cloud Module',
+      short_name: 'ICTBerufsbildung',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',

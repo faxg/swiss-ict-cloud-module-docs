@@ -1,0 +1,32 @@
+---
+title: "M210 - Public Cloud für Anwendungen Nutzen"
+metaTitle: "Modul 210 - Public Cloud für Anwendungen Nutzen"
+metaDescription: "This is the meta description for this page"
+---
+
+
+[Modulbaukasten](https://www.modulbaukasten.ch/module/c79920b1-1878-eb11-a812-000d3a831967/de-DE?title=Public-Cloud-f%C3%BCr-Anwendungen-nutzen) |
+[PDF](https://modulbaukasten.ch/Module/210_1_Public%20Cloud%20f%C3%BCr%20Anwendungen%20nutzen.pdf)
+
+# Kompetenzfeld: Application Engineering
+
+- **Kompetenz**
+  Definiert die Nutzung von Cloud Services (Container- und Serverless Technologien) hinsichtlich der betrieblichen Anforderung für eine Beispielanwendung und realisiert die gewählte Lösung mit Hilfe von CI/CD Prozessen.
+- **Objekt**
+  Umsetzung einer einfachen Cloud Anwendung mit Hilfe unterschiedlicher Cloud Services.
+
+# Handlungsziele
+
+1. Definiert eine Cloudlösung (einfache Architektur) abgestimmt auf die Zielsetzungen des Unternehmens anhand einer Beispielanwendung.
+2. Beurteilt das vorliegende Sicherheitskonzept (Benutzer, Rollen, Zugriffe, Auditing, Verschlüsselung, Verantwortlichkeiten (Shared Responsibility) anhand der Beispielanwendung.
+3. Stellt die Beispielanwendung basierend auf Container- und Serverless Technologien bereit.
+4. Automatisiert die Bereitstellung der Beispielanwendung mit Hilfe einer CI/CD Pipeline.
+
+# Lernmaterialien
+
+- [Microsoft Azure Cloud](https://azure.microsoft.com/de-de/)
+
+# Microsoft Zertifizierungen
+
+- [AZ-900 - Microsoft Azure Grundlagen](https://docs.microsoft.com/de-de/learn/certifications/exams/az-900)
+- [AZ-204 - Developing Solutions for Microsoft Azure](https://docs.microsoft.com/de-de/learn/certifications/exams/az-204)
