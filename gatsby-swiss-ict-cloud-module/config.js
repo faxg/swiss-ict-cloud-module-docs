@@ -50,7 +50,7 @@ const config = {
     title: 'Cloud Module | Microsoft',
   },
   siteMetadata: {
-    title: 'Swiss ICT Berufsbildung - Microsoft Cloud Modules',
+    title: 'Schweizer ICT Berufsbildung - Microsoft Cloud Modules',
     description: 'Learning material for ICT Berufsbildung . Powered by learn.microsoft.com ',
     ogImage: null,
     docsLocation:
