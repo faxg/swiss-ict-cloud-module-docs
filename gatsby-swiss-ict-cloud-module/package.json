@@ -68,7 +68,7 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"WARN: Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
