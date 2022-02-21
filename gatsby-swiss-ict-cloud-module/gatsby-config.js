@@ -48,7 +48,34 @@ const plugins = [
       anonymize: false,
     },
   },
+  /*   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/locales`,
+      name: `locale`,
+    },
+  },
+  {
+    resolve: `gatsby-plugin-react-i18next`,
+    options: {
+      localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+      languages: [`de`, `fr`, `it`, `en`],
+      defaultLanguage: `de`,
+      // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+      siteUrl: `https://kind-tree-03a002a03.1.azurestaticapps.net`,
+      // you can pass any i18next options
+      i18nextOptions: {
+        interpolation: {
+          escapeValue: false, // not needed for react as it escapes by default
+        },
+        keySeparator: false,
+        nsSeparator: false,
+      },
+      pages: [],
+    },
+  }, */
 ];
+
 // check and add algolia
 if (
   config.header.search &&
@@ -87,6 +114,15 @@ if (config.gatsby && !config.gatsby.trailingSlash) {
   plugins.push('gatsby-plugin-remove-trailing-slashes');
 }
 
+// Load MS Learn plugin from local repo for dev, and via published npm package for prod
+if (process.env.NODE_ENV == `development`) {
+  console.log('Loading MS Learn source plugin from local repo for development');
+  plugins.push(require.resolve('../gatsby-source-microsoft-learn-catalog'));
+} else {
+  console.log('Loading MS Learn source plugin from npmjs.org registry for production...');
+  plugins.push('gatsby-source-microsoft-learn-catalog');
+}
+
 module.exports = {
   pathPrefix: config.gatsby.pathPrefix,
   siteMetadata: {
@@ -110,9 +146,8 @@ module.exports = {
   flags: {
     DEV_SSR: false,
     FAST_DEV: false, // Enable all experiments aimed at improving develop server start time
-    PRESERVE_WEBPACK_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Use webpack's persistent caching and don't delete webpack's cache when changing gatsby-node.js & gatsby-config.js files.
     PRESERVE_FILE_DOWNLOAD_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Don't delete the downloaded files cache when changing gatsby-node.js & gatsby-config.js files.
     PARALLEL_SOURCING: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/parallel-sourcing-feedback)) · Run all source plugins at the same time instead of serially. For sites with multiple source plugins, this can speedup sourcing and transforming considerably.
-    FUNCTIONS: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/functions-feedback)) · Compile Serverless functions in your Gatsby project and write them to disk, ready to deploy to Gatsby Cloud
+    //FUNCTIONS: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/functions-feedback)) · Compile Serverless functions in your Gatsby project and write them to disk, ready to deploy to Gatsby Cloud
   },
 };
