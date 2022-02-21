@@ -1,1 +1,2 @@
-# swiss-ict-cloud-module-docs
+# Schweizer ICT Berufsschule - Cloud Modules
+
